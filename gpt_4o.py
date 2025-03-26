@@ -4,15 +4,13 @@ import time
 import os
 import json
 import openai
-import httpx  # 用于捕获请求超时错误
+import httpx
 from openai import OpenAI
 
-# 读取 API Key，避免 NoneType 错误
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise ValueError("请设置环境变量 OPENAI_API_KEY")
+    raise ValueError("OPENAI_API_KEY environment variable not set")
 
-# 初始化 OpenAI 客户端
 client = OpenAI(api_key=api_key)
 
 def process_video(item):
@@ -28,7 +26,7 @@ def process_video(item):
         base64Frames.append(base64.b64encode(buffer).decode("utf-8"))
 
     video.release()
-    print(len(base64Frames), "frames read for", item["id"])
+    print(len(base64Frames), "frames processed for", item["id"])
 
     image_list = list(map(lambda x: {"image": x, "resize": 768}, base64Frames[0::50]))
 
@@ -52,26 +50,25 @@ def process_video(item):
         "top_p": 1,
     }
 
-    # **添加重试机制**
     retries = 10
     for attempt in range(retries):
         try:
             result = client.chat.completions.create(**params)
-            break  # 成功请求后跳出循环
+            break
         except (httpx.TimeoutException, openai.OpenAIError) as e:
             if attempt < retries - 1:
-                wait_time = 2 ** attempt  # 指数退避策略
-                print(f"请求超时，重试 {attempt+1}/{retries}，等待 {wait_time}s... 错误: {e}")
+                wait_time = 2 ** attempt
+                print(f"Timeout, retry {attempt+1}/{retries}, waiting {wait_time}s... Error: {e}")
                 time.sleep(wait_time)
             else:
-                raise Exception(f"请求失败，已重试 {retries} 次: {e}")
+                raise Exception(f"Request failed after {retries} attempts: {e}")
 
     token_used = {
         'completion_tokens': result.usage.completion_tokens,
         'prompt_tokens': result.usage.prompt_tokens,
         'total_tokens': result.usage.total_tokens
     }
-    print(f"Processing for {item['id']}:")
+    print(f"Processed {item['id']}:")
     print(token_used)
 
     response = result.choices[0].message.content
@@ -94,13 +91,12 @@ def main(json_path):
 
         json_data[i:i + batch_size] = batch
 
-        # **添加异常处理，避免 JSON 写入失败**
         try:
             with open(json_path, 'w') as f:
                 json.dump(json_data, f, indent=4)
         except Exception as e:
-            print(f"JSON 保存失败: {e}")
+            print(f"Failed to save JSON: {e}")
 
 if __name__ == "__main__":
-    json_path = '../0_30_s_academic_v0_1/0_30_s_academic_v0_1_cap_processed_wash_kmeans_gpt.json'
+    json_path = ''
     main(json_path)

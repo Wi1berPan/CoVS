@@ -1,0 +1,62 @@
+[
+  {
+    "time_range": "5-10",
+    "total_videos": 1978,
+    "average_keyframes": 0,
+    "error_rate": 1.0,
+    "empty_keyframes_count": 1978,
+    "sample_positions": [
+      "Pos_1",
+      "Pos_19",
+      "Pos_47"
+    ]
+  },
+  {
+    "time_range": "10-15",
+    "total_videos": 2380,
+    "average_keyframes": 3.0,
+    "error_rate": 0.9987,
+    "empty_keyframes_count": 2377,
+    "sample_positions": [
+      "Pos_35",
+      "Pos_52",
+      "Pos_56"
+    ]
+  },
+  {
+    "time_range": "15-20",
+    "total_videos": 2327,
+    "average_keyframes": 2.9,
+    "error_rate": 0.9871,
+    "empty_keyframes_count": 2297,
+    "sample_positions": [
+      "Pos_6",
+      "Pos_11",
+      "Pos_16"
+    ]
+  },
+  {
+    "time_range": "20-25",
+    "total_videos": 2301,
+    "average_keyframes": 3.0,
+    "error_rate": 0.9909,
+    "empty_keyframes_count": 2280,
+    "sample_positions": [
+      "Pos_0",
+      "Pos_3",
+      "Pos_4"
+    ]
+  },
+  {
+    "time_range": "25-30",
+    "total_videos": 2999,
+    "average_keyframes": 2.91,
+    "error_rate": 0.5689,
+    "empty_keyframes_count": 1706,
+    "sample_positions": [
+      "Pos_2",
+      "Pos_10",
+      "Pos_12"
+    ]
+  }
+]

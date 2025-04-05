@@ -1,0 +1,50 @@
+
+entire ques: 109, qs correct: 61, qs acc: 0.5596
+entire videos: 109, desc correct: 28, desc acc: 0.2569
+
+interleave ques: 193, qs correct: 115, qs acc: 0.5959
+interleave videos: 193, desc correct: 52, desc acc: 0.2694
+
+misleading ques: 95, qs correct: 89, qs acc: 0.9368
+misleading videos: 95, desc correct: 69, desc acc: 0.7263
+
+=== Overall Results ===
+Questions: 397, Correct: 265, Accuracy: 0.6675
+Videos: 397, Correct: 149, Accuracy: 0.3753
+Not matching rate: ques: 0.0126, desc: 0.0000
+
+=== All Unmatched Questions ===
+Total unmatched questions: 5
+
+#1 Split: interleave
+Video: interleave_003
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video shows a person sitting at a desk with a computer monitor. A cat is standing on the desk, looking at the screen. Suddenly, the cat jumps down from the desk, and the person reaches out to catch it. The unexpected event is the cat's sudden jump and the person's quick reaction to catch it.
+
+#2 Split: interleave
+Video: interleave_094
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video shows a person hanging from a tree branch. Initially, they are holding onto the branch with both hands and swinging slightly. Suddenly, they lose grip and fall, landing on the ground below. The fall is unexpected and abrupt, indicating an accident.
+
+#3 Split: interleave
+Video: interleave_131
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video depicts a pole vaulting event. The athlete is seen running towards the bar, planting the pole, and attempting to clear it. However, there is an unexpected outcome as the athlete appears to have fallen or missed the bar, landing on the mat instead of clearing it successfully.
+
+#4 Split: interleave
+Video: interleave_158
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video shows a river with fast-moving water, and there is a visible erosion or collapse of the riverbank. A building appears to be precariously perched on the edge of the cliff. Suddenly, the structure seems to give way, and part of the building falls into the river, causing a splash and debris. This unexpected event highlights the danger posed by the unstable riverbank.
+
+#5 Split: interleave
+Video: interleave_190
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video appears to be a cartoon featuring a cat and a mouse. The cat is sitting on the floor, reading a book, while the mouse is nearby. Suddenly, the cat seems startled or surprised, quickly closing the book and looking around. The mouse then approaches the cat, seemingly curious or playful. The interaction between the two characters is the main focus of the video.
+
+=== All Unmatched Judgements ===
+Total unmatched judgements: 0

@@ -1,0 +1,38 @@
+
+entire ques: 109, qs correct: 63, qs acc: 0.5780
+entire videos: 109, desc correct: 24, desc acc: 0.2202
+
+interleave ques: 193, qs correct: 125, qs acc: 0.6477
+interleave videos: 193, desc correct: 74, desc acc: 0.3834
+
+misleading ques: 95, qs correct: 94, qs acc: 0.9895
+misleading videos: 95, desc correct: 73, desc acc: 0.7684
+
+=== Overall Results ===
+Questions: 397, Correct: 282, Accuracy: 0.7103
+Videos: 397, Correct: 171, Accuracy: 0.4307
+Not matching rate: ques: 0.0076, desc: 0.0000
+
+=== All Unmatched Questions ===
+Total unmatched questions: 3
+
+#1 Split: interleave
+Video: interleave_093
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video shows a person climbing a utility pole. There is a sudden change where the person appears to lose grip and falls, but they quickly regain composure and continue climbing. The unexpected event was the brief loss of grip, which was quickly resolved.
+
+#2 Split: interleave
+Video: interleave_192
+Question: Did any accident or anything unexpected happen in the video?
+Expected: Yes.
+Prediction: The video features a group of dogs interacting with a pole. Initially, the dogs are excited and curious, barking and jumping around the pole. Suddenly, a small dog appears, seemingly stuck to the pole, which startles the larger dogs. The smaller dog then falls off the pole, landing on the ground, causing surprise and amusement among the other dogs.
+
+#3 Split: misleading
+Video: misleading_095
+Question: Are these guys in the video taking a helicopter ride?
+Expected: No.
+Prediction: The video shows a group of people gathered around a helicopter, appearing to be excited and posing for photos. One person is seen speaking or gesturing towards the camera, possibly giving a speech or introduction. The atmosphere seems celebratory, suggesting they might be about to embark on a special event or experience, such as a helicopter ride.
+
+=== All Unmatched Judgements ===
+Total unmatched judgements: 0
